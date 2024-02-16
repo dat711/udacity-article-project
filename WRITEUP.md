@@ -13,4 +13,4 @@ I choosing a web app service over a virtual machine. Cost-wise, the web app wins
 
 *Detail how the app and any other needs would have to change for you to change your decision in the last section.* 
 
-Should the application's security demands escalate, necessitating advanced protective measures, and if its architecture grows in complexity through the adoption of microservices, integration of diverse technologies, and an influx of users, I would incline towards employing a virtual machine. In such scenarios, the inherent flexibility of virtual machines proves indispensable for effectively controlling and managing these evolving requirements.
+Should the application's security demands escalate, necessitating advanced protective measures, and if its architecture grows in complexity through the use of microservices, integration of diverse technologies, and an influx of users, I would incline towards employing a virtual machine. In such scenarios, the inherent flexibility of virtual machines proves indispensable for effectively controlling and managing these evolving requirements.
