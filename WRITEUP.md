@@ -7,18 +7,19 @@
 - *Choose the appropriate solution (VM or App Service) for deploying the app*
 - *Justify your choice*
 
-Table compare app service and virtual machine in azure
-| Feature | App Service | Virtual Machine (VM) |
-|---|---|---|
-| Cost | Pay-per-use based on resource consumption, cost-effective for smaller projects | Fixed cost based on allocated resources, potentially higher for small projects |
-| Scalability | Automatically scales up/down based on traffic | Manual scaling required, or use VM scale sets with added complexity |
-| Availability | Built-in redundancy and disaster recovery for high availability | Requires configuring availability features like Azure Availability Zones |
-| Workflow | Simplified configuration and built-in tools, easier to deploy and manage | Greater control over environment, but requires managing server software, runtime, and deployment |
+To compare between App service and VM from azure, let make some bullet point comparison:
+- Cost: Azure VM is generally more expensive than Azure App Service due to the higher resource requirements such as labour for manual management and set up. However, it can be wiser economical choice for resource-intensive application.
+- Scalability: Both services offer scaling as one of their main features, but Azure App Service can automatically scale based on demand, making it easier to manage for smaller application, the real benefit from the flexibility of fully controls of VM will only become remarkable at bigger projects
+- Availability: Both services offer high availability. However, the App service offer an easier to use option with redundancy storage and disaster recovery already be taken care by azure which result in slightly higher uptime compare to manual setting configuration in the case of VM
+-  Azure VM requires more technical expertise which deep knowledge in server config to set up and manage, while Azure App Service's work flow is easier for user by ultilizing built-in tools.
 
-I choosing a web app service over a virtual machine. Cost-wise, this project is small application and low traffic count so use app service would us saving cash, better for virtual machine is fixed cost based on allocated resources. Regarding scalability, this project is small in scale so if traffic increases it will not be significant. App Service will automatically scale up/down based on traffic, better for virtual machines that require manual scaling or use more complex VM scalers. High availability is built-in, so your users enjoy consistent uptime. And when it comes to scaling, the web app adapts to your needs effortlessly, avoiding the manual VM configuration struggles. The seamless integration with your GitHub repository allows for effortless deployment with just a few clicks. This streamlines your workflow significantly compared to the cumbersome setup and configuration of a VM. Furthermore, the web app service excels in simplicity and speed. Based on the costs, scalability, availability, and workflow analysis I chosed the web app service to deploy for my project article.
+My choice is App service for this application. In term of expenses, the fact that this project's app is small in scale and traffic make App service a more afordable options compare to fixed cost on infrastucture. With a small project like this the traffic change is small and managable with automatic scaling builtin that expand and reduce underlying resources based on the situation. The built-in backup redundancy and disaster recovery mean that the app users always get to enjoy it's high uptime and availability. The intergration with 3rd party ci/cd such as github making the deployment process effortlesss with just a few click, free me to focus on app developping. Excel in Simplicity and enable speed app-development process, the app service is my clear choice in all criterion.
 
 ### Assess app changes that would change your decision.
 
 *Detail how the app and any other needs would have to change for you to change your decision in the last section.* 
 
-I would choose virtual machine when security requirements is for specific compliance needs or highly sensitive data, VM can provide deeper control over security configurations. Regarding scalability, the app service is good to choose if traffic increases it will not be significant , but significantly high or unpredictable traffic spikes the app service cannot be managed, VM might offer more granular control over scaling. Regarding complexity, if this project involves complex processing, machine learning, or custom software dependencies, VM might provide more flexibility. However, keep in mind the cost, management complexity when using virtual machine. If the above happens. I will change my decision about using a virtual machine.
+I will switch back to VM in some of these scenarios:
+- When I need granular control over your environment such as installing specific software, have to sastisfy custom security requirêmnt, or running operating systems that the App service do not offer.
+- When the application is resources intensive, VM offer independent scaling for each resource such as CPU, memory, or storage. make it a better choice in this case
+- Integration with On-Premises Infrastructure and legacy applications: If I have to countinue development with an app that can natively cannot be run on app service, I was left with no choice but VM. Furthermore, in case I have to integration with existing on-premises infrastructure, VMs offer higher flexibility for manage private networking and hybrid deployments.
