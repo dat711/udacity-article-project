@@ -20,6 +20,6 @@ My choice is App service for this application. In term of expenses, the fact tha
 *Detail how the app and any other needs would have to change for you to change your decision in the last section.* 
 
 I will switch back to VM in some of these scenarios:
-- When I need granular control over your environment such as installing specific software, have to sastisfy custom security requirêmnt, or running operating systems that the App service do not offer.
+- When I need granular control over your environment such as installing specific software, have to sastisfy custom security requirement, or running operating systems that the App service do not offer.
 - When the application is resources intensive, VM offer independent scaling for each resource such as CPU, memory, or storage. make it a better choice in this case
 - Integration with On-Premises Infrastructure and legacy applications: If I have to countinue development with an app that can natively cannot be run on app service, I was left with no choice but VM. Furthermore, in case I have to integration with existing on-premises infrastructure, VMs offer higher flexibility for manage private networking and hybrid deployments.
